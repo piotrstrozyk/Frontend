@@ -1,0 +1,29 @@
+POST http://localhost:7000/login
+Content-Type: application/json
+
+{
+    "email": "k@ug",
+    "password": "aA1234"
+}
+###
+
+POST http://localhost:7000/register 
+Content-Type: application/json
+
+{
+    "name": "John", "surname": "Kowalski", "nick": "user", "email": "us@er", "password": "aA1234"
+}
+
+###
+
+GET http://localhost:7000/profile
+
+###
+
+GET http://localhost:7000/logout
+
+###
+
+DELETE http://localhost:7000/profile
+
+###

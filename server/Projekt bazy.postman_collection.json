@@ -1,0 +1,946 @@
+{
+	"info": {
+		"_postman_id": "8cb69c7a-bbfb-4792-a413-8a268698956f",
+		"name": "Projekt bazy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32552400"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"thi@rd\",\r\n    \"password\": \"aA1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\", \"surname\": \"Kowalski\", \"nick\": \"third\", \"email\": \"thi@rd\", \"password\": \"aA1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/profile Current User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\", \"surname\": \"Kowalski\", \"nick\": \"user\", \"email\": \"us@er\", \"password\": \"aA1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/profile Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/newbook Add Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "\"Tales of horror\"",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"type": "file",
+							"src": "postman-cloud:///1eebafd9-6862-4510-a725-9b398a96972a"
+						},
+						{
+							"key": "author",
+							"value": "\"H.P. Lovecraft\"",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "\"The stories of H. P. Lovecraft have been a source of fascination for readers since they were published in the early twentieth century, and legions of fans continue to reinvent his dark and fantastical world to this day. This collection of short stories by the master of the macabre contains more than twenty of his most popular works, including \"The Call of Cthulhu,\" \"The Shadow Over Innsmouth,\" and \"The Dunwich Horror.\" Each story will leave the reader feeling unsettled and uncertain, but also appreciative of the unique elements that Lovecraft introduced to the literary world. Makes a perfect gift for fans of Lovecraft, his work, and the HBO series Lovecraft Country.\"\n",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "\"horror\"",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "1930",
+							"type": "text"
+						},
+						{
+							"key": "publisher",
+							"value": "\"Fancy books\"",
+							"type": "text"
+						},
+						{
+							"key": "publishingYear",
+							"value": "2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/newbook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"newbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/allusers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/allusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"allusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/allbooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/allbooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"allbooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/book/:id Update Book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Tales of horror\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/book/65b17f48d9ebd8329d378fee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"book",
+						"65b17f48d9ebd8329d378fee"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/book/:id Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/book/65b17f9edb2a0dfaaa702c18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"book",
+						"65b17f9edb2a0dfaaa702c18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/:id Book Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tales of horror\", \"publishingYear\": 2002, \"author\": \"H.P. Lovecraft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/65b18014cb1d20e85fe793c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"65b18014cb1d20e85fe793c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/reviews/:title Review Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"score\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/reviews/Captain Nemo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"reviews",
+						"Captain Nemo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/comments/:title Add comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Worst Book\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/comments/Captain Nemo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"comments",
+						"Captain Nemo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/comment/:id Delete Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Reading all the time\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/comment/65b18d568060da914d7f8eb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"comment",
+						"65b18d568060da914d7f8eb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/allcomments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"score\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/allcomments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"allcomments"
+					],
+					"query": [
+						{
+							"key": "scor",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main Main Page",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"score\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/main",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/search Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tales of horror\", \"publishingYear\": 2002, \"author\": \"H.P. Lovecraft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/user/:id  Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\": \"newNick\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/user/65b1839ae5596b1467f2faaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"user",
+						"65b1839ae5596b1467f2faaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/admin/comments/:id  Update Comment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\": \"newNick\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/admin/comments/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"admin",
+						"comments",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/:id  Reserve Book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/reservation/65b17f48d9ebd8329d378fee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"reservation",
+						"65b17f48d9ebd8329d378fee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/reservation/:id  Confirm Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/reservation/65b17f9edb2a0dfaaa702c18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"reservation",
+						"65b17f9edb2a0dfaaa702c18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/borrowing/:id  Borrow Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/borrowing/65b17f9edb2a0dfaaa702c18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"borrowing",
+						"65b17f9edb2a0dfaaa702c18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/returning/:id  Return Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/returning/65b17f9edb2a0dfaaa702c18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"returning",
+						"65b17f9edb2a0dfaaa702c18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/book/reservation/:id Cancel Reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/book/reservation/65b17f9edb2a0dfaaa702c18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"book",
+						"reservation",
+						"65b17f9edb2a0dfaaa702c18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/authorProlific Statystyka autor najwięcej książek",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/authorProlific",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"authorProlific"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/authorPopular Autor Najwięcej recenzji",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/authorPopular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"authorPopular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/bestBook Najlepsza Książka",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/authorPopular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"authorPopular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/oldestBook Najstarsza Książka",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/bestBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"bestBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/main/genrePopular Najpopularniejszy gatunek",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/main/genrePopular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"main",
+						"genrePopular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/allbooks/:title",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/allbooks/Tales of horror",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"allbooks",
+						"Tales of horror"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7000/allbooks/:sort",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7000/allbooks/publishingYear-",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"allbooks",
+						"publishingYear-"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
