@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './Navbar.scss'; // Załaduj plik ze stylami SCSS
+import './NavBar.scss';
 
 const Navbar = () => {
   const handleLogout = async () => {
